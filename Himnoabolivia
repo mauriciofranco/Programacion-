@@ -1,0 +1,23 @@
+Algoritmo sin_titulo
+	Escribir "Bolivianos el hado propicio"
+	Escribir "corono nuestros votos y anhelos"
+	Escribir "Es ya libre,ya libre este suelo"
+	Escribir "Ya ceso su servil condicion"
+FinAlgoritmo
+
+// himno a bolivia.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	cout<<"Himno a Bolivia"<<endl;
+	cout<<"Bolivianos el hado propicio"<<endl;
+	cout<<"corono nuestros votos y anhelos"<<endl;
+	cout<<"es ya libre, ya libre este suelo"<<endl;
+	cout<<"ya seso su servil condicion"<<endl;
+	getch ();
+}
