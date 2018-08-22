@@ -1,0 +1,33 @@
+areadeltrianguloProceso areadeltriangulo
+	escribir "ingrese la base:";
+	leer base;
+	escribir "ingrese la altura:";
+	leer altura;
+	area <-(base * altura)/2;
+	escribir "el area del triangulo es:";
+	escribir area;
+	
+	
+	
+FinProceso
+c++
+// area del triangulo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{
+	float b,h,area;
+	cout<< "escribir la base: ";
+	cin>> b;
+	cout<< "escribir altura: ";
+	cin>> h;
+	cout<< "el area del triangulo es: ";
+	area=(b*h)/2;
+	cout<< area;
+	getch ();
+}
