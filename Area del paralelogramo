@@ -1,0 +1,36 @@
+Algoritmo areadelparalelogramo
+		escribir "la base del paraleleogramos es: ";
+		leer B;
+		escribir "la altura del paralelogramo es: ";
+		leer H;
+		area<- (b*h)/2;
+		escribir "el area del paralelogramo es: ";
+		escribir area;
+	
+
+		
+	FinAlgoritmo
+	
+
+	// area del paralelogramo.cpp : Defines the entry point for the console application.
+	//
+	
+
+	#include "stdafx.h"
+	#include <iostream>
+	#include "conio.h"
+	using namespace std;
+	
+
+	void main()
+	{
+		float b,h,area;
+		cout<< "la base del paralelogramo es: ";
+		cin>> b;
+		cout<< "la altura del paralelogramo es: ";
+		cin>> h;
+		area = (b*h)/2;
+		cout<< "el area del pralelogramo es: ";
+		cout<< area;
+		getch() ;
+	}
