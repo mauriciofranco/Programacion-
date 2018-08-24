@@ -1,0 +1,20 @@
+// perimetro.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float r,area,perimetro;
+	cout<<"escribir el radio de la circunferencia: ";
+	cin>>r;
+	area=3.1416*r*r;
+	cout<<"el area de la circunferencia: ";
+	cout<<area<<endl;
+	perimetro=2*3.1416*r;
+	cout<<"el perimetro de la circunferencia es: ";
+	cout<<perimetro;
+	getch();
+}
