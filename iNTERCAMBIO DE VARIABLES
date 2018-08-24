@@ -1,0 +1,31 @@
+// intercambio.cpp : Defines the entry point for the console application. 
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float A,B,C;
+	cout<<"escribe la variable A: ";
+	cin>>A;
+	cout<<"escribir la variable B: ";
+	cin>>B;
+	C=A;
+	A=B;
+	B=C;
+	cout<<"el nuevo valor de a es: "<<A<<endl;
+	cout<<"el nuevo valor de b es: "<<B<<endl;
+	getch();
+}
+
+PSEUDOCODIGO
+Proceso Intercambio
+	Leer A;
+	Leer B;
+	aux<-A;
+	B<-aux;
+	Escribir "El valor de A es:";
+	Escribir "El valor de B es:";
+FinProceso
