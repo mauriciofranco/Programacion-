@@ -1,0 +1,27 @@
+// ejercicio 1 examenCAMISAS.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main(){
+	int numcamisas;
+	float preciototal,totalapagardcto;
+	//Validar la entrada 
+	do{
+		cout<<"Ingresar numero de camisas: ";
+		cin>> numcamisas;
+	} while (numcamisas<0);
+	do{
+		cout<<"Ingresar el precio de la camisa: ";
+		cin>> preciototal;
+	} while (numcamisas<0);
+	//Determinar el descuento
+	if (numcamisas<=5)
+		totalapagardcto=numcamisas*preciototal*0.7;
+	else
+		totalapagardcto=numcamisas*preciototal*0.8;
+	cout<<"El total a pagar con descuento: "<<totalapagardcto;
+	getch();
+  }
