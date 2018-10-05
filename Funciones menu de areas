@@ -1,0 +1,66 @@
+// menu de funciones.cpp.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+float areacuadrado (float l);
+float areatriangulo (float b, float h);
+float areacirculo (float r);
+
+void main()
+{
+	int opcion, lado, base, altura, radio, area;
+	do {
+		cout << "1.- Area del cuadrado" << endl;
+		cout << "2.- Area del triangulo" << endl;
+		cout << "3.- Area del circulo" << endl;
+		cout << "0.- salir" << endl;
+		cin >> opcion;
+
+		switch (opcion)
+		{
+		case 1: cout << "Ingrese el lado";
+				cin >> lado;
+				area=areacuadrado(lado);
+				cout << area << endl; break;
+		case 2: cout << "Ingrese la base: ";
+				cin >> base;
+				cout << "Ingrese la altura: ";
+				cin >> altura;
+				area= areatriangulo(base, altura);
+				cout << area << endl;break;
+		case 3: cout << "Ingrese el radio: ";
+				cin >> radio;
+				area = areacirculo (radio);
+				cout << area << endl; break;
+		case 0: cout << "Salir"<< endl; break;
+		default: cout << "opcion invalida"<<endl;
+		}
+	} while (opcion!=0);
+		
+		getch();
+}
+
+float areacuadrado (float l)
+{
+	float area;
+	area=l*l;
+	return area;
+}
+
+float areatriangulo (float b, float h)
+{
+	float area;
+	area=(b*h)/2;
+	return area;
+}
+
+float areacirculo (float r)
+{
+	float area, pi=3.141592;
+	area= pi*r*r;
+	return area;
+}
