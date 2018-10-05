@@ -1,0 +1,25 @@
+//Suma de los cuadrados de los primeros N números enteros.
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+int sumacuadrados (int n);
+void main()
+{
+	int n, resp;
+	cout << "Ingrese el valor maximo de la serie" << endl;
+	cin >> n;
+	resp=sumacuadrados(n);
+	cout <<"La sumatoria de los cuadrados es: " << resp;
+	getch();
+}
+int sumacuadrados (int n)
+{
+	int s=0;
+	for (int i=1; i<=n; i++)
+	{
+		s=s+(i*i);
+	}
+	return s;
+}
