@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	double sm, sueldo,T, salariototal   ;
+	sm=2060;
+	cout << "El salario minimo es: " << sm <<endl;
+	cout << "Ingrese el salario del trabajador" << endl;
+	cin >> sueldo;
+	
+	while (sueldo != -999)
+		{
+			if (sueldo>=sm)
+			{
+				salariototal=sueldo - sueldo*0.1271;
+			if (sueldo > 4*sm)
+			{salariototal = salariototal * 0.87;}
+			cout << "El salario despues de impuetoes es: " << salariototal << endl;
+			cout << "Ingrese el proximo sueldo";
+			cin >> sueldo;
+			} else { 
+		cout << "El salario esta por debajo de la norma, llamar al ministerio de trabajo" << endl;
+		cout << "Ingrese el proximo sueldo";
+		cin >> sueldo;
+			}
+	}
+	getch();
+}
