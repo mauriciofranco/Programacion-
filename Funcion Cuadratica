@@ -1,0 +1,52 @@
+// cuadratica referencia.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+float discriminante (float a, float b, float c);
+void reales (float a, float b, float c, float &x1, float &x2); // & son variables por refernecia, es decir que cambian de valor en la funcion porque son punteros a las varibales llamadas.
+void unica (float a, float b, float c, float &x);
+void imaginario (float a, float b, float c, float x1, float x2);
+void main () 
+{
+	float a,b,c,v1,v2,d,x;
+	cout << "Ingrese los valores de la ecuacion cuadratica";
+	cin >> a >> b >> c ;
+	d=discriminante (a,b,c);
+	if (d>0)
+	{
+		reales (a,b,c,v1,v2); // se puede hacer cuando la funcion no devuelve nada osea void
+		cout << "x1= " << v1<<endl;
+		cout << "x2= " << v2 << endl;
+	}
+	
+	if (d=0)
+			{
+				unica (a,b,c,x);
+				cout << x;
+			}
+	if (d<0)
+			cout << "Las raices son imaginarias";
+	getch();
+}
+float discriminante (float a, float b, float c)
+{
+	float d;
+	d= (b*b)- (4*a*c);
+	return d;
+}
+
+void reales (float a, float b, float c, float &x1, float &x2)
+{
+	x1 =( (-b) + (sqrt ( (b*b) - (4*a*c) )) )/ (2*a);
+	x2 =( (-b) -( sqrt ( (b*b) - (4*a*c)) ) )/ (2*a);
+}
+void unica (float a, float b, float c, float &x)
+{
+	x= -b/(2*a);
+}
+void imaginario (float a, float b, float c, float x1, float x2)
