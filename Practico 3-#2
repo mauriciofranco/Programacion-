@@ -1,0 +1,25 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int sumaimpares (int n);
+void main()
+{
+	int n, resp;
+	cout << "Ingrese el numero maximo de la serie" << endl;
+	cin >> n;
+	resp=sumaimpares(n);
+	cout << "La sumatoria es: " << resp;
+	getch();
+}
+int sumaimpares (int n)
+{
+	int s=0, i=1;
+	while (i<=n)
+	{
+		if (i%2!=0)
+			s=s+i;
+		i=i+1;
+	}
+	return s;
+}
