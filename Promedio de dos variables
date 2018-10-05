@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	int a;
+	float p=0;
+	cout << "Ingrese el primer numero: ";
+	cin >> a;
+	p=p+a;
+	cout << "Ingrese el segundo numero: ";
+	cin >> a;
+	p=p+a;
+	cout << "Ingrese el tercer numero: ";
+	cin >> a;
+	p=p+a;
+	cout << "Ingrese el cuarto numero: ";
+	cin >> a;
+	p=p+a;
+	cout << "Ingrese el quinto numero: ";
+	cin >> a;
+	p=p+a;
+	p=p/5;
+	cout << "El promedio es: "<<p;
+
+	getch();
