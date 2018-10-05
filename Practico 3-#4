@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+float serie (float n);
+void main()
+{
+	int n, resp;
+	cout << "Ingrese el valor maximo de la serie" << endl;
+	cin >> n;
+	resp =serie(n);
+	cout << resp;
+	getch();
+}
+float serie (float n)
+{
+	float s,a,i;
+	s=0;
+	for ( i=1; i<=n; i++)
+	{
+		a= i*pow(-1,i+1);
+		s=s+a;
+		
+	}
+	return s;
+}
