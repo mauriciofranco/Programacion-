@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+	double n, d1, d2, d3, d4, d5, d6, precio1, precio2, precio3, precio4, precio5, precio6, total, descuento, totalPagar;
+   cout<<"Bienvenido a multicenter, muchas gracias por su compra. Cuantos productos ha llevado? ";
+   cin>>n;
+   if (n<=3)
+   {
+	   cout<<"Por favor ingrese el precio de sus productos, si le piden mas datos de los necesarios por favor introduzca 0 ";
+		cin>>precio1>>precio2>>precio3;
+		d1=0.3;
+		d2=0.2;
+		d3=0.1;
+ 
+		total= precio1+precio2+precio3;
+		descuento=precio1*d1+precio2*d2+precio3*d3;
+   } else{
+	  if (n>3&&n<=6){
+		  cout<<"Por favor ingrese el precio de sus productos. Si le piden mas datos de los necesarios por favor introduzca 0"<<endl;
+		  cin>>precio1>>precio2>>precio3>>precio4>>precio5>>precio6;
+		  d1=0.2;
+		  d2=0.2;
+		  d3=0.2;
+		  d4=0.2;
+		  d5=0.2;
+		  d6=0.2;
+		  total= precio1+precio2+precio3+precio4+precio5+precio6;
+		  descuento=precio1*d1+precio2*d2+precio3*d3+precio4*d4+precio5*d5+precio6*d6;
+	  }else{
+
+		 
+		 
+	  }
+   }
+
+   totalPagar=total-descuento;
+   cout<<"El total a pagar es el siguiente monto: "<<totalPagar;
+   getch();
+}
