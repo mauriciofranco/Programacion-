@@ -1,0 +1,25 @@
+
+//suma de los numeros enteros entere 1 y n
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int serie (int n);
+void main ()
+{
+	int n, x;
+	cout << "Ingrese el valor maximo de la serie"<<endl;
+	cin >> n;
+	x=serie(n);
+	cout << "La sumatoria es: " << x;
+	getch();
+}
+int serie (int n)
+{
+	int s=0;
+	for (int i=1; i<=n ;i++)
+	{
+		s=s+i;
+	}
+	return s;
+}
