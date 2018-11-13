@@ -1,0 +1,36 @@
+// ejercicio 4.-examinito-cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+#include "conio.h"
+#include "string"
+#define MAX 100
+
+using namespace std;
+bool palindromo(string frase);
+void main()
+{
+	string frase;
+	bool respuesta;
+	cout<<"Introducir la frase que desea analiza: "<<endl;
+	getline(cin,frase);
+	respuesta=palindromo(frase);
+	if (respuesta==true)
+		cout<<"La frase es palindromo "<<endl;
+	else
+		cout<<"La frase no es palindromo "<<endl;
+	getch();
+}
+
+bool palindromo(string frase)
+{
+ bool r=true;
+ int longitud=frase.length();
+ for(int i=0;i<longitud/2;i++)
+	 if (frase.at(i)!=frase.at(longitud-1-i))
+		 return false;
+	 else
+		 return true;
+}
