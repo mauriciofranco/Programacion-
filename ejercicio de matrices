@@ -1,0 +1,89 @@
+// ejercicio matriz.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define MAXCOL 20
+#define MAXFIL 20
+
+using namespace std;
+
+void cargar (int matriz[MAXFIL][MAXCOL],int n, int m);
+void mostrar (int matriz[MAXFIL][MAXCOL],int n, int m);
+int mayor (int matriz[MAXFIL][MAXCOL],int n, int m);
+void clasificar_fila(int matriz[MAXFIL][MAXCOL],int n, int m);
+void ejerciciodematriz(int matriz[MAXFIL][MAXCOL],int n, int m);
+
+void main (){
+
+int m,n,matriz[MAXFIL][MAXCOL],op;
+
+        do {cout<<"Ingrese el numero de filas: "<<endl;
+			cin>>n;}
+	  while (n>MAXFIL && n<=0);
+
+	    do{
+	  cout<<"Ingrese el numero de columnas: ";
+	  cin>>m;
+} while (m>MAXCOL && m<=0);
+
+        do
+  {
+	cout<<"----------Menu------------"<<endl;
+	cout<<"1.cargar matriz"<<endl;
+    cout<<"2.mostrar matriz"<<endl;
+	cout<<"3.mayor"<<endl;
+	cout<<"4.clasificar matriz"<<endl;
+	cout<<"5.ejercicio de matriz"<<endl;
+	cout<<"0. salir"<<endl;
+	cout<< "ingrese la opcion "<<endl;
+	cin>>op;
+	switch (op)
+	{
+	case 1:cargar (matriz m,n);break;
+	case 2:mostrar(matriz m,n);break;
+	case 3:mayor(matriz m,n);break;
+	case 4:clasificar_fila(matriz m,n);break;
+	case 5:ejerciciodematriz(matriz m,n);break;
+	case 0:cout<<"adios"<<endl;break;
+	default:cout<<"opcion invalida"<<endl;break;
+	}
+  }while (op!=6);
+  getch();
+
+}
+
+void cargar(int matriz[MAXFIL][MAXCOL],int n, int m)
+{int i, j;
+ 
+  for(i=0;i<n;i++)
+   for(j=0;j<m;j++)
+     {cout<<"MAT ["<<i<<"] ["<<j<<"]: ";
+      cin>>matriz[i][j];
+     }
+}
+
+void mostrar(int matriz[MAXFIL][MAXCOL],int n, int m)
+{int i, j;
+ 
+  for(i=0;i<n;i++)
+   {for(j=0;j<m;j++)
+       cout<<"MAT ["<<i<<"] ["<<j<<"]: "<<matriz[i][j]<<"\t";   
+	cout<<endl;
+   }
+}
+
+int mayor (int matriz[MAXFIL][MAXCOL],int n, int m)
+{int tmayor,i, j;
+ 
+tmayor= matriz[0][0];
+  for(i=0;i<n;i++)
+   for(j=0;j<m;j++)
+	{ if(tmayor<matriz[i][j])
+			tmayor=matriz[i][j];
+   
+     }
+return tmayor;
+}
