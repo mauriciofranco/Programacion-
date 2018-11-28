@@ -1,0 +1,34 @@
+// Practico de string
+// Ejercicio 12
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void eliminarletra(string frase, char n);
+void main(){
+string frase;
+char n;
+
+cout<<"Ingresa la frase: ";
+getline(cin,frase);
+
+cout<<"Que caracter desea borrar? ";
+cin>>n;
+eliminarletra(frase, n);
+
+}
+
+void eliminarletra(string frase, char n){
+string aux;
+		
+		for(int i = 0; i < frase.length(); i++){
+			if(frase[i] != n)
+				aux = aux + frase[i];
+		}
+cout<<aux;
+getch();
+
+}
