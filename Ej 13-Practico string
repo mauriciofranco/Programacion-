@@ -1,0 +1,33 @@
+// Practico de string
+// Ejercicio 13
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void subcadena(string frase, string frase2);
+
+void main(){
+string frase, frase2;
+
+cout<<"Ingrese la frase: ";
+getline(cin, frase);
+
+cout<<"Ingrese la palabra que quiere buscar: ";
+getline(cin, frase2);
+
+subcadena(frase, frase2);
+
+getch();
+}
+
+void subcadena(string frase, string frase2){
+	if(frase.find(frase2) < frase.length())
+		cout<<"La frase comienza en la posicion "<<frase.find(frase2);
+	else
+		cout<<-1;
+}
+
+//Codigo by Daiki chibana.
