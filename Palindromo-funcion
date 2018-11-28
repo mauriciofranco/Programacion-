@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "string"
+using namespace std;
+#define max 100
+
+bool palindromo (string cad);
+void main()
+{
+string cad;
+getline(cin,cad);
+bool r;
+r=palindromo(cad);
+if (r==true)
+cout << "si es";
+else
+cout << "no es";
+getch();
+}
+bool palindromo (string cad)
+{	for (int i=0;i<cad.length(); i++)
+{if (cad[i]==cad[cad.length()-1-i])
+return true;
+else
+return false;
+}
+}
