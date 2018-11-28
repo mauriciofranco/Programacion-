@@ -1,0 +1,27 @@
+// Ejercicio 6
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void vocales(string &frase);
+
+void main(){
+string frase;
+cout<<"Ingrese la frase: "<<endl;
+getline(cin, frase);
+
+vocales(frase);
+cout<<frase;
+getch();
+}
+
+void vocales(string &frase) {
+	for (int i = 0; i < frase.length(); i++){
+		if(frase[i] == 'a' || frase[i] == 'e'|| frase[i] == 'i'|| frase[i] == 'o'|| frase[i] == 'u')
+			frase[i] = ' ';
+	}
+
+}
