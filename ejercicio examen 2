@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+bool comparar (int vec[]);
+
+void main () {
+int vec[6];
+
+	for(int i = 0; i < 6; i++){
+		cout<<"Ingrese valor de "<<i<<": ";
+		cin>>vec[i];
+	}
+
+comparar(vec);
+
+if (comparar(vec) == true) 
+	cout<<"Es partidiario";
+else 
+	cout<<"No es partidiario";
+
+getch();
+}
+
+bool comparar(int vec[]) {
+int cont = 0;
+	for(int i = 0; i < 5; i++)
+		for(int j = 1; j < 6; j++)
+			if(vec[i] > vec[j])
+				return true;
+			else 
+				return false;
