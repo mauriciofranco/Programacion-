@@ -1,0 +1,31 @@
+// Practico de string
+// Ejercicio 8
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void ordenvertical(string &palabra, string &frase, int n);
+
+void main(){
+int n;
+string palabra, frase;
+
+cout<<"Cuantos caracteres desea ingresar?"<<endl;
+cin>>n;
+cin.ignore();
+ordenvertical(palabra,frase, n);
+cout<<frase;
+getch();
+}
+
+void ordenvertical(string &palabra, string &frase, int n) {
+	for (int i = 0; i < n; i++){
+	cout<<"Ingrese la palabra: ";
+	getline(cin, palabra);
+
+	frase = frase + palabra + ' ';
+	}
+}
