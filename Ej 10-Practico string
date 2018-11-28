@@ -1,0 +1,28 @@
+// Practico de string
+// Ejercicio 10
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void cantvocales(string frase, int &cont);
+
+void main(){
+string frase;
+int cont = 0;
+
+cout<<"ingrese la frase: ";
+getline(cin, frase);
+cantvocales(frase, cont);
+
+cout<<cont;
+
+getch();
+}
+void cantvocales(string frase, int &cont) {
+	for(int i= 0; i < frase.length()-1; i++)
+			if((frase[i] == 'a'||frase[i] == 'e'||frase[i] == 'i'||frase[i] == 'o'||frase[i] == 'u') && (frase[i] == 'a'||frase[i+1] == 'e'||frase[i+1] == 'i'||frase[i+1] == 'o'||frase[i+1] == 'u' ))
+				cont++;
+}
