@@ -29,5 +29,3 @@ void subcadena(string frase, string frase2){
 	else
 		cout<<-1;
 }
-
-//Codigo by Daiki chibana.
