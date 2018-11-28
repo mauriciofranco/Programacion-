@@ -1,0 +1,20 @@
+
+// Ejercicio 5
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void main(){
+string frase, frase2;
+cout<<"Ingrese la frase: "<<endl;
+getline(cin, frase);
+cout<<"Ingrese la frase 2: "<<endl;
+getline(cin, frase2);
+
+cout<<frase<<frase2;
+
+getch();
+}
