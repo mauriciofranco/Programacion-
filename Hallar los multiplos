@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void multiplo (int a, int b, int &v1);
+void main () {
+int a, b, v1;
+cout<<"Ingrese los numeros por favor: ";
+cin>>a>>b;
+multiplo(a, b, v1);
+cout<<"el valor es: "<<v1<<endl;
+getch();
+}
+
+void multiplo (int a, int b, int &v1) {
+	int mayor, menor, estatus;
+		if (a > b) {
+		mayor = a;
+		menor  = b;
+		if (mayor%menor == 0){
+		v1 = 1;
+		} else {
+		v1 = 0;
+		}
+		} else {
+		mayor = b;
+		menor = a;
+		if (mayor%menor == 0){
+		v1 = 1;
+		} else {
+		v1 = 0;
+		} 
+		}
+}
