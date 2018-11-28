@@ -1,0 +1,43 @@
+// Practico de string
+// Ejercicio 14
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void mayusculas(string &frase);
+void codificacion(string &frase, int n);
+
+void main(){
+string frase;
+int n;
+cout<<"Ingrese la frase: ";
+getline(cin, frase);
+
+cout<<"Ingrese el valor de n: ";
+cin>>n;
+
+mayusculas(frase);
+codificacion(frase, n);
+
+getch();
+}
+
+void mayusculas(string &frase){
+	for(int i = 0; i < frase.length(); i++)
+		if (frase[i] >= 65 && frase[i] <= 90 )
+			frase[i] = frase[i]+32;
+}
+
+void codificacion(string &frase, int n) {
+	for(int i = 0; i < frase.length(); i++)
+		if (frase[i] >= 97 || frase[i] <= 122 ){
+			frase[i] = frase[i] + n;
+				if (frase[i] > 122)
+					frase[i] = frase[i]-26;
+				
+		}
+cout<<frase;
+}
