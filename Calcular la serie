@@ -1,0 +1,25 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+float serie (float n, float base);
+void main () {
+float n, base;
+cout<<"Ingrese el valor de N: ";
+cin>>n;
+cout<<"Ingrese el valor de la base: ";
+cin>>base;
+cout<<"El resultado es: "<<5+serie (n , base);
+getch();
+}
+
+float serie (float n, float base) {
+	float i=1, fac=1, sum = 0;
+	while (i <= n) {
+	fac = fac*i;
+	sum = sum + pow(base, i)/fac;
+	i++;
+	}
+return sum;
+}
