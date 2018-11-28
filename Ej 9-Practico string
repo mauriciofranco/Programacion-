@@ -1,0 +1,33 @@
+// Practico de string
+// Ejercicio 9
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void conjunto(char A[], char B[], char C[], int n);
+void main(){
+char A[10], B[10], C[10];
+int n;
+cout<<"cuantas palabras son?"<<endl;
+cin>>n;
+
+	for(int i = 0; i < n; i++) {
+		cout<<"Ingrese el valor de A: ";
+		cin>>A[i];
+		cout<<"Ingrese el valor de B: ";
+		cin>>B[i];
+	}
+conjunto(A, B, C, n);
+
+getch();
+}
+void conjunto(char A[], char B[], char C[], int n){
+	for(int i = 0; i < n; i++)
+		for(int j = 0; j < n-1; j++)
+			if (A[i] == B[j])
+				cout<<A[i];
+
+}
