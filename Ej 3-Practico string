@@ -1,0 +1,31 @@
+// Practico de string
+// Ejercicio 3
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void mayuscula(string &frase);
+
+void main(){
+string frase;
+
+cout<<"Ingrese la frase: ";
+getline(cin, frase);
+mayuscula(frase);
+	if (frase[0] != ' ')			//Para que la primer letra este en mayuscula
+		frase[0] = frase.at(0)-32;
+cout<<frase;
+
+getch();
+}
+
+void mayuscula(string &frase){
+	for (int i = 1; i < frase.length(); i++){ 
+			if(frase.at(i) != ' ')
+        if(frase.at(i-1) == ' ')
+          frase.at(i) = frase.at(i)-32;
+	}
+}      
