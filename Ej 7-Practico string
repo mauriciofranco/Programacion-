@@ -1,0 +1,35 @@
+// Practico de string
+// Ejercicio 6
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void ordenalfabetico(string &frase);
+
+void main(){
+string frase;
+cout<<"Ingrese la frase: "<<endl;
+getline(cin, frase);
+
+ordenalfabetico(frase);
+cout<<frase;
+getch();
+}
+
+void ordenalfabetico(string &frase) {
+char aux; 
+int longitud = frase.length();
+
+	for(int i = 0; i < longitud-1;i++){
+		for(int j = 1; j < longitud; j++){
+			if(frase[i] > frase[j]){
+				aux = frase[i];
+				frase[i] = frase[j];
+				frase[j] = aux;
+			}
+		}
+	}
+}
